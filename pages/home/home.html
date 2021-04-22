@@ -5,29 +5,36 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>Body Mass Index Calculator</h1>
+  <h1>PERSONAL LOAN CALCULATOR APP</h1>
   <p>
-   There's no "perfect weight" that fits everyone. BMI, or body mass index, measures how healthy your weight is based on how tall you are. It gives you a clue to your risk for weight-related health problems. 
+   This Personal Loan calculator will give you a broad estimate on what your monthly
+payment will be and what the matured loan payment will be after it.
   </p>
   <p>
-    Source: https://www.webmd.com
+    Source: https://www.ecomparemo.com/loans/personal-loan-calculator
     </p>
   <br /> 
-  <img src="https://cdn.jsdelivr.net/gh/GabrielArellano/BMI-Calculator@master/emtech%20pic.png">
 <ion-item>
-  <ion-label>Height in Meter:</ion-label>
-  <ion-input type="number" [(ngModel)]="height"></ion-input>
+  <ion-label>Loan Amount:</ion-label>
+  <ion-input type="number" [(ngModel)]="Loan Amount"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label>Weight in Kilogram:</ion-label>
-  <ion-input type="number" [(ngModel)]="weight"></ion-input>
+  <ion-label>Loan Term:</ion-label>
+  <ion-input type="number" [(ngModel)]="Loan Term"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Interest Rate:</ion-label>
+  <ion-input type="number" [(ngModel)]="Interest Rate"></ion-input>
 </ion-item>
 
-<button ion-button color="secondary" (click)="calculateBMI ()">
+<button ion-button color="secondary" (click)="calculatePL ()">
   CALCULATE
 </button>
 
 <ion-item *ngIf="bmi">
-  <h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+  <h2>MONTHLY PAYMENT: {{bmi}} <code> ({{bmiMessage}})</code></h2>
 </ion-item>
-  
+
+<ion-item *ngIf="bmi">
+  <h2>INTEREST PAID: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+</ion-item>
